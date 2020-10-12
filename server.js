@@ -3,6 +3,7 @@ const path = require("path");
 const fs = require("fs");
 
 const app = express();
+//now able to run in different ports
 const PORT = process.env.PORT || 3001;
 const mainDir = path.join(__dirname, "/public");
 
@@ -58,5 +59,5 @@ app.delete("/api/notes/:id", function(req, res) {
 })
 
 app.listen(PORT, function() {
-    console.log(`Now listening to port ${port}`);
+    console.log(`Now listening to port ${PORT}`);
 })
